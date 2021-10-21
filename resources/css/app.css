@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.router-link-exact-active {
+	@apply text-secondary;
+}
+
+/* stock level class */
+.in-stock {
+	@apply bg-green-500 text-green-700;
+}
+
+.low-stock {
+	@apply bg-yellow-500 text-yellow-500;
+}
+
+.out-of-stock {
+	@apply bg-red-500 text-red-500;
+}
+/* Algolia Styles */
+.ais-SearchBox-form {
+    @apply block relative;
+}
+.ais-SearchBox-input {
+    @apply appearance-none px-3 h-8 relative rounded-md w-full;
+}
+.ais-SearchBox-input:focus {
+    @apply outline-none;
+}
+.ais-SearchBox-submit {
+    @apply absolute inset-y-0 left-0 ml-3 hidden;
+}
+.ais-SearchBox-submitIcon {
+    @apply fill-current h-4 text-gray-600 w-4 hidden;
+}
+.ais-SearchBox-reset {
+    @apply absolute inset-y-0 mr-3 right-0;
+}
+.ais-SearchBox-resetIcon {
+    @apply fill-current h-3 text-gray-600 w-3;
+}
+
+/* .ais-Hits {
+    @apply px-3;
+} */
+.ais-Hits-list {
+	@apply flex flex-wrap justify-around !important;
+}
+.ais-Hits-item {
+	@apply py-2 rounded-md w-40 mb-16;
+}
+
+@screen sm {
+    .ais-Hits-list {
+        @apply flex flex-wrap justify-around gap-3 !important;
+    }
+    .ais-Hits-item {
+        @apply py-2 rounded-md w-32 mb-16;
+    }
+}
+@screen md {
+    .ais-Hits-item {
+        @apply px-3 py-2 rounded-md w-44 mb-16;
+    }
+}
+@screen lg {
+    .ais-Hits-item {
+        @apply px-3 py-2 rounded-md w-44 mb-16;
+    }
+}
+@screen xl {
+    .ais-Hits-list {
+        @apply flex flex-wrap justify-start gap-1 px-3 !important;
+    }
+    .ais-Hits-item {
+        @apply px-3 py-2 rounded-md w-52 mb-16;
+    }
+}
+
+/* card buttons */
+.card-button-r {
+    @apply bg-secondary border-r font-medium inline-flex items-center leading-none px-1 h-7 rounded-l text-white text-xl;
+}
+.card-button-l {
+    @apply bg-secondary border-l font-medium inline-flex items-center leading-none px-1 h-7 rounded-r text-white text-xl;
+}
